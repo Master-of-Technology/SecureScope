@@ -1,0 +1,516 @@
+/* =========================================================
+   Analyst Registration
+   ========================================================= */
+
+.analyst-registration-card {
+    width: min(100%, 760px);
+}
+
+
+/* =========================================================
+   Step Header
+   ========================================================= */
+
+.form-step-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 28px;
+}
+
+.form-step-number {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    flex: 0 0 46px;
+
+    border-radius: 12px;
+
+    color: #fff;
+
+    background: var(--blue);
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+}
+
+.form-step-header h2 {
+    margin: 0 0 4px;
+}
+
+.form-step-header .muted {
+    margin: 0;
+}
+
+
+/* =========================================================
+   Sections
+   ========================================================= */
+
+.form-section {
+    margin-top: 30px;
+
+    padding-top: 24px;
+
+    border-top:
+        1px solid var(--border);
+}
+
+.form-section:first-of-type {
+    margin-top: 0;
+
+    padding-top: 0;
+
+    border-top: 0;
+}
+
+.form-section-title {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 5px;
+}
+
+.form-section-title h3 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 1rem;
+
+    font-weight: 800;
+}
+
+.form-required {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 3px 9px;
+
+    border-radius: 999px;
+
+    color: var(--muted);
+
+    background: #f1f5f9;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+}
+
+.form-help {
+    margin: 0 0 13px;
+
+    color: var(--muted);
+
+    font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   Selection Grid
+   ========================================================= */
+
+        .selection-grid {
+            display: flex;
+    
+            flex-direction: column;
+    
+            gap: 8px;
+    
+            width: 100%;
+        }
+
+/* =========================================================
+   Selection Card
+   ========================================================= */
+
+.selection-card {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+
+/* =========================================================
+   Hidden Checkbox
+   ========================================================= */
+
+.selection-card input[type="checkbox"] {
+    position: absolute;
+
+    width: 1px !important;
+
+    height: 1px !important;
+
+    min-width: 1px !important;
+
+    min-height: 1px !important;
+
+    margin: -1px !important;
+
+    padding: 0 !important;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    clip-path: inset(50%);
+
+    white-space: nowrap;
+
+    border: 0 !important;
+
+    opacity: 0;
+
+    appearance: none;
+
+    -webkit-appearance: none;
+}
+
+
+/* =========================================================
+   Visible Selection Card
+   ========================================================= */
+.selection-content {
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    min-height: 54px;
+
+    padding: 12px 15px;
+
+    gap: 12px;
+
+    border: 1px solid #d8e1ea;
+
+    border-radius: 9px;
+
+    color: var(--text);
+
+    background: #fff;
+
+    transition:
+        border-color 160ms ease,
+        background-color 160ms ease,
+        box-shadow 160ms ease,
+        transform 160ms ease;
+}
+/* =========================================================
+   Check
+   ========================================================= */
+
+.selection-check {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 22px;
+
+    height: 22px;
+
+    flex: 0 0 22px;
+
+    border: 1.5px solid #b8c7d6;
+
+    border-radius: 6px;
+
+    color: transparent;
+
+    background: #fff;
+
+    font-size: 13px;
+
+    font-weight: 900;
+}
+
+.selection-text {
+    flex: 1;
+
+    color: var(--navy);
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   Hover
+   ========================================================= */
+
+.selection-card:hover .selection-content {
+    border-color: #9cc3ff;
+
+    background: #fbfdff;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 16px rgba(16, 42, 67, 0.08);
+}
+
+
+/* =========================================================
+   Selected
+   ========================================================= */
+
+.selection-card.selected .selection-content {
+    border-color: var(--blue);
+
+    background: #eff6ff;
+
+    box-shadow:
+        0 0 0 1px rgba(37, 99, 235, 0.08);
+}
+
+.selection-card.selected .selection-check {
+    border-color: var(--blue);
+
+    color: #fff;
+
+    background: var(--blue);
+}
+
+
+/* =========================================================
+   Focus
+   ========================================================= */
+
+.selection-card input[type="checkbox"]:focus-visible+.selection-content {
+    outline: 3px solid rgba(37, 99, 235, 0.16);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   Analyst Progress
+   ========================================================= */
+
+.analyst-progress {
+    margin: 25px 0 30px;
+}
+
+.analyst-progress-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 9px;
+}
+
+.analyst-progress-header strong {
+    color: var(--navy);
+
+    font-size: 0.82rem;
+}
+
+.analyst-progress-header span {
+    color: var(--muted);
+
+    font-size: 0.8rem;
+}
+
+.analyst-progress-bar {
+    width: 100%;
+
+    height: 7px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: #e7edf4;
+}
+
+.analyst-progress-bar span {
+    display: block;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: var(--blue);
+
+    transition: width 250ms ease;
+}
+
+
+/* =========================================================
+   Review
+   ========================================================= */
+
+.review-summary {
+    display: grid;
+
+    gap: 0;
+
+    margin: 20px 0;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: #fff;
+}
+
+.review-summary p {
+    margin: 0;
+
+    padding: 12px 15px;
+
+    border-bottom:
+        1px solid #e6edf3;
+
+    font-size: 0.9rem;
+}
+
+.review-summary p:last-child {
+    border-bottom: 0;
+}
+
+.review-summary strong {
+    display: inline-block;
+
+    min-width: 90px;
+
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   Single Checkbox
+   ========================================================= */
+
+.checkbox-single {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin: 18px 0;
+
+    color: var(--text);
+
+    font-size: 0.88rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.checkbox-single input[type="checkbox"] {
+    width: auto;
+
+    min-height: auto;
+
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   Registration Textarea
+   ========================================================= */
+
+.analyst-registration-card textarea {
+    width: 100%;
+
+    min-height: 140px;
+
+    padding: 11px 13px;
+
+    border: 1px solid #9fb3c8;
+
+    border-radius: 8px;
+
+    color: var(--text);
+
+    background: #fff;
+
+    font: inherit;
+
+    line-height: 1.8;
+
+    resize: vertical;
+}
+
+.analyst-registration-card textarea:focus {
+    border-color: var(--blue);
+
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.14);
+}
+
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .selection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-step-header {
+        align-items: flex-start;
+    }
+
+    .form-step-number {
+        width: 42px;
+        height: 42px;
+
+        flex-basis: 42px;
+    }
+
+    .analyst-progress-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 3px;
+    }
+}

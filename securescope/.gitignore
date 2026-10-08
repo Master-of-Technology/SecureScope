@@ -1,0 +1,9 @@
+# Local editor files
+.vscode/
+
+# Runtime and uploaded evidence (never version control client files)
+storage/uploads/*
+!storage/uploads/.gitkeep
+
+# Local secrets if environment variables are not available
+config/local.php

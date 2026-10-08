@@ -1,0 +1,249 @@
+/* =========================================================
+   Main Layout
+   ========================================================= */
+
+.site-header {
+    background: var(--navy);
+
+    box-shadow:
+        0 2px 10px rgba(16, 42, 67, 0.2);
+}
+
+
+/* =========================================================
+   Public Header
+   ========================================================= */
+
+.public-header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 20;
+
+    border-bottom: 1px solid var(--border);
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    backdrop-filter: blur(14px);
+}
+
+.public-header-content,
+.footer-content {
+    width: min(1180px,
+            calc(100% - 32px));
+
+    min-height: 70px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+.public-brand {
+    color: var(--navy);
+
+    font-size: 1.3rem;
+    font-weight: 800;
+
+    letter-spacing: 0.02em;
+}
+
+.public-brand:hover {
+    text-decoration: none;
+}
+
+.public-nav {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.public-nav a {
+    color: var(--text);
+
+    font-size: 0.94rem;
+    font-weight: 600;
+
+    transition:
+        color 160ms ease;
+}
+
+.public-nav a:hover {
+    color: var(--blue);
+
+    text-decoration: none;
+}
+
+.public-header-action {
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   Authenticated Header
+   ========================================================= */
+
+.header-content {
+    width: min(1180px,
+            calc(100% - 32px));
+
+    min-height: 64px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+}
+
+.brand {
+    color: #fff;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    letter-spacing: 0.02em;
+}
+
+.brand:hover {
+    text-decoration: none;
+}
+
+.main-nav {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 16px;
+}
+
+.main-nav a,
+.user-menu>a {
+    color: #d9e2ec;
+
+    font-size: 0.93rem;
+}
+
+.user-menu {
+    margin-right: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+.user-menu form {
+    margin: 0;
+}
+
+
+/* =========================================================
+   Page
+   ========================================================= */
+
+.page-shell {
+    width: min(1100px,
+            calc(100% - 32px));
+
+    margin: 0 auto;
+
+    padding: 40px 0 56px;
+}
+
+.page-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+.site-footer {
+    border-top: 1px solid #23496e;
+
+    color: #d9e2ec;
+
+    background: #0b2239;
+}
+
+.footer-content {
+    min-height: 70px;
+
+    justify-content: space-between;
+
+    color: #c5d5e5;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   Responsive Layout
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .header-content,
+    .public-header-content {
+        padding: 12px 0;
+
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .main-nav {
+        order: 3;
+
+        width: 100%;
+    }
+
+    .public-nav {
+        order: 3;
+
+        width: 100%;
+
+        gap: 14px;
+    }
+
+    .user-menu {
+        margin-right: 0;
+    }
+
+    .public-header-action {
+        margin-right: auto;
+    }
+
+    .page-shell {
+        padding-top: 28px;
+    }
+
+    .footer-content {
+        padding: 15px 0;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 4px;
+    }
+}

@@ -1,0 +1,369 @@
+/* =========================================================
+   Cards
+   ========================================================= */
+
+.metric-card,
+.details-card {
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    background: var(--surface);
+
+    box-shadow: var(--shadow);
+}
+
+.metric-card {
+    padding: 22px;
+}
+
+.metric-card span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 0.9rem;
+}
+
+.metric-card strong {
+    display: block;
+
+    margin-top: 6px;
+
+    color: var(--navy);
+
+    font-size: 2rem;
+}
+
+.details-card {
+    padding: 24px;
+}
+
+.details-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   Metrics
+   ========================================================= */
+
+.metric-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,
+            minmax(200px, 1fr));
+
+    gap: 16px;
+
+    margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   Buttons
+   ========================================================= */
+
+.button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 40px;
+
+    padding: 9px 15px;
+
+    border: 1px solid transparent;
+
+    border-radius: 7px;
+
+    font: inherit;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.button:hover {
+    text-decoration: none;
+}
+
+.button-primary {
+    color: #fff;
+
+    background: var(--blue);
+}
+
+.button-primary:hover {
+    background: var(--blue-dark);
+}
+
+.button-secondary {
+    color: #fff;
+
+    border-color: #9fb3c8;
+
+    background: transparent;
+}
+
+.button-secondary:hover {
+    color: #fff;
+
+    background:
+        rgba(255, 255, 255, 0.1);
+}
+
+.button-secondary-dark {
+    color: var(--text);
+
+    border-color: var(--border);
+
+    background: #fff;
+}
+
+.button-secondary-dark:hover {
+    color: var(--navy);
+
+    background: #f5f7fb;
+
+    text-decoration: none;
+}
+
+.button-danger {
+    color: #fff;
+
+    background: #b42318;
+}
+
+.button-danger:hover {
+    color: #fff;
+
+    background: #912018;
+}
+
+.button-ghost {
+    min-height: 34px;
+
+    padding: 6px 10px;
+
+    color: #fff;
+
+    border-color: #627d98;
+
+    background: transparent;
+}
+
+.button-ghost:hover {
+    background:
+        rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================================================
+   Alerts
+   ========================================================= */
+
+.alert {
+    margin-bottom: 20px;
+
+    padding: 12px 15px;
+
+    border: 1px solid transparent;
+
+    border-radius: 8px;
+}
+
+.alert ul {
+    margin: 0;
+
+    padding-right: 20px;
+}
+
+.alert-success {
+    color: var(--success-text);
+
+    border-color: #abefc6;
+
+    background: var(--success-bg);
+}
+
+.alert-error {
+    color: var(--error-text);
+
+    border-color: #fecdca;
+
+    background: var(--error-bg);
+}
+
+
+/* =========================================================
+   Status
+   ========================================================= */
+
+.status-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 4px 9px;
+
+    border-radius: 999px;
+
+    font-size: 0.78rem;
+
+    font-weight: 800;
+}
+
+.status-active {
+    color: var(--success-text);
+
+    background: var(--success-bg);
+}
+
+.status-inactive {
+    color: var(--error-text);
+
+    background: var(--error-bg);
+}
+
+
+/* =========================================================
+   Empty State
+   ========================================================= */
+
+.empty-state {
+    padding: 28px 16px;
+
+    border: 1px dashed var(--border);
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    color: var(--muted);
+}
+
+.empty-state strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--navy);
+}
+
+.empty-state p {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   Section Headings
+   ========================================================= */
+
+.section-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+.section-heading.compact {
+    margin-bottom: 16px;
+}
+
+.section-heading.compact h2 {
+    margin-bottom: 4px;
+}
+
+.section-heading.compact p {
+    margin-bottom: 0;
+}
+
+.section-heading-centered {
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   Quick Actions
+   ========================================================= */
+
+.quick-actions {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+.quick-action {
+    display: grid;
+
+    gap: 5px;
+
+    padding: 17px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: #fff;
+
+    transition:
+        border-color 160ms ease,
+        transform 160ms ease;
+}
+
+.quick-action:hover {
+    border-color: #9cc3ff;
+
+    transform: translateY(-2px);
+
+    text-decoration: none;
+}
+
+.quick-action strong {
+    color: var(--navy);
+}
+
+.quick-action span {
+    color: var(--muted);
+
+    font-size: 0.88rem;
+}
+
+.quick-action-disabled {
+    opacity: 0.65;
+
+    cursor: not-allowed;
+}
+
+.quick-action-disabled:hover {
+    border-color: var(--border);
+
+    transform: none;
+}
+
+
+/* =========================================================
+   Page Actions
+   ========================================================= */
+
+.page-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}

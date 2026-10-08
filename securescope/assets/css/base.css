@@ -1,0 +1,106 @@
+:root {
+    --navy: #102a43;
+    --blue: #2563eb;
+    --blue-dark: #1d4ed8;
+    --page: #f5f7fb;
+    --surface: #ffffff;
+    --border: #d9e2ec;
+    --text: #243b53;
+    --muted: #627d98;
+
+    --success-bg: #ecfdf3;
+    --success-text: #067647;
+
+    --error-bg: #fef3f2;
+    --error-text: #b42318;
+
+    --shadow: 0 12px 28px rgba(16, 42, 67, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    color: var(--text);
+
+    background:
+        linear-gradient(180deg,
+            #f8fbff 0,
+            var(--page) 420px);
+
+    direction: rtl;
+    text-align: right;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.55;
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 8px;
+
+    color: var(--navy);
+
+    font-size: clamp(1.75rem,
+            4vw,
+            2.25rem);
+}
+
+h2 {
+    margin-bottom: 10px;
+
+    color: var(--navy);
+
+    font-size: 1.2rem;
+}
+
+h3 {
+    color: var(--navy);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.eyebrow {
+    margin-bottom: 6px;
+
+    color: var(--blue);
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}

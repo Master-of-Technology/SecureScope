@@ -1,0 +1,462 @@
+/* =========================================================
+   Public Website
+   ========================================================= */
+
+.hero-section {
+    position: relative;
+
+    isolation: isolate;
+
+    width: min(1180px,
+            calc(100% - 32px));
+
+    margin: 30px auto 0;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(191, 219, 254, 0.24);
+
+    border-radius: 22px;
+
+    color: #fff;
+
+    background: #06172e;
+
+    box-shadow:
+        0 26px 50px rgba(16, 42, 67, 0.2);
+}
+
+.hero-section-image::before {
+    position: absolute;
+
+    z-index: -1;
+
+    inset: 0;
+
+    content: '';
+
+    background:
+        linear-gradient(90deg,
+            rgba(5, 19, 40, 0.15) 0%,
+            rgba(5, 19, 40, 0.48) 50%,
+            rgba(5, 19, 40, 0.96) 100%),
+        url('../images/securescope-hero.png') center / cover no-repeat;
+}
+
+.hero-section-image::after {
+    position: absolute;
+
+    z-index: -1;
+
+    top: -45%;
+
+    right: -12%;
+
+    width: 52%;
+
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+
+    content: '';
+
+    background:
+        radial-gradient(circle,
+            rgba(37, 99, 235, 0.18),
+            transparent 68%);
+}
+
+.hero-content {
+    padding:
+        clamp(35px, 6vw, 72px);
+}
+
+.hero-content-image {
+    display: flex;
+
+    align-items: center;
+
+    min-height: 545px;
+}
+
+.hero-copy {
+    width: min(100%, 560px);
+
+    margin-inline-end: auto;
+}
+
+.hero-copy h1 {
+    max-width: 690px;
+
+    color: #fff;
+
+    font-size:
+        clamp(2rem, 5vw, 3.45rem);
+
+    line-height: 1.25;
+}
+
+.hero-copy .eyebrow,
+.public-cta .eyebrow {
+    color: #bfdbfe;
+}
+
+.hero-text {
+    max-width: 560px;
+
+    color: #d9e2ec;
+
+    font-size: 1.05rem;
+}
+
+.hero-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 26px;
+}
+
+.hero-pills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 26px 0 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.hero-pills li {
+    padding: 6px 10px;
+
+    border: 1px solid rgba(191, 219, 254, 0.45);
+
+    border-radius: 100px;
+
+    color: #dbeafe;
+
+    background:
+        rgba(15, 40, 68, 0.4);
+
+    font-size: 0.79rem;
+}
+
+
+/* =========================================================
+   Public Sections
+   ========================================================= */
+
+.public-section {
+    width: min(1100px,
+            calc(100% - 32px));
+
+    margin: 68px auto;
+}
+
+.service-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.service-grid-large {
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+}
+
+.service-card {
+    min-height: 100%;
+
+    padding: 25px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(145deg,
+            #fff,
+            #f8fbff);
+
+    box-shadow: var(--shadow);
+
+    transition:
+        transform 180ms ease,
+        box-shadow 180ms ease,
+        border-color 180ms ease;
+}
+
+.service-card:hover {
+    border-color: #9cc3ff;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 32px rgba(16, 42, 67, 0.12);
+}
+
+.service-card h3,
+.service-card h2 {
+    margin: 12px 0 8px;
+
+    color: var(--navy);
+
+    font-size: 1.1rem;
+}
+
+.service-card p {
+    margin-bottom: 0;
+
+    color: var(--muted);
+}
+
+.service-icon {
+    display: grid;
+
+    width: 42px;
+    height: 42px;
+
+    place-items: center;
+
+    border-radius: 12px;
+
+    color: #fff;
+
+    background:
+        linear-gradient(135deg,
+            var(--blue),
+            #0ea5e9);
+
+    box-shadow:
+        0 7px 14px rgba(37, 99, 235, 0.25);
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   Public Page Hero
+   ========================================================= */
+
+.public-page-hero {
+    padding: 55px 40px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(135deg,
+            #eef6ff,
+            #ffffff 55%),
+        #fff;
+
+    box-shadow: var(--shadow);
+}
+
+.public-page-hero h1 {
+    font-size:
+        clamp(2rem, 5vw, 3.1rem);
+
+    line-height: 1.28;
+}
+
+.public-page-hero>p:last-child {
+    color: var(--muted);
+
+    font-size: 1.05rem;
+}
+
+.public-card {
+    box-shadow: none;
+}
+
+.two-column-section,
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    align-items: start;
+
+    gap: 28px;
+}
+
+.check-list {
+    display: grid;
+
+    gap: 12px;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.check-list li {
+    position: relative;
+
+    padding-right: 26px;
+}
+
+.check-list li::before {
+    position: absolute;
+
+    right: 0;
+
+    content: '✓';
+
+    color: var(--success-text);
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   Workflow
+   ========================================================= */
+
+.workflow-section {
+    padding: 40px;
+
+    border-radius: 18px;
+
+    background: #fff;
+
+    box-shadow: var(--shadow);
+}
+
+.workflow-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.public-cta {
+    width: min(1100px,
+            calc(100% - 32px));
+
+    margin: 68px auto;
+
+    padding: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 24px;
+
+    border-radius: 18px;
+
+    color: #fff;
+
+    background: var(--navy);
+
+    box-shadow: var(--shadow);
+}
+
+
+/* =========================================================
+   Responsive Public
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .hero-content,
+    .service-grid,
+    .service-grid-large,
+    .workflow-grid,
+    .two-column-section,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        gap: 28px;
+    }
+
+    .hero-content-image {
+        min-height: 500px;
+
+        align-items: flex-end;
+    }
+
+    .hero-copy {
+        width: 100%;
+    }
+
+    .hero-section-image::before {
+        background:
+            linear-gradient(0deg,
+                rgba(5, 19, 40, 0.96) 0%,
+                rgba(5, 19, 40, 0.55) 65%,
+                rgba(5, 19, 40, 0.16) 100%),
+            url('../images/securescope-hero.png') 30% center / cover no-repeat;
+    }
+
+    .public-section {
+        margin: 45px auto;
+    }
+
+    .workflow-section {
+        padding: 28px;
+    }
+
+    .workflow-grid article {
+        padding: 12px 0;
+    }
+
+    .workflow-grid article:not(:last-child)::after {
+        top: auto;
+
+        right: 0;
+
+        bottom: -7px;
+
+        left: 0;
+
+        width: 100%;
+
+        height: 1px;
+    }
+
+    .public-cta {
+        margin: 45px auto;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .public-page-hero {
+        padding: 38px 24px;
+    }
+}
